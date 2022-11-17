@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+  
+  
+      <div class="card col-4" *ngFor="let medidasm of medidasMujer" style="width: 18rem;">
+        <img class="card-img-top" src="{{url + 'get-imageMujer/' + medidasm.image}}" alt="">
+        <div class="card-body">
+          <h5 class="card-title">medidas</h5>
+          <p class="card-text">{{medidasm.busto}}</p>
+          <p class="card-text">{{medidasm.bajoBusto}}</p>
+          <p class="card-text">{{medidasm.manga}}</p>
+          <p class="card-text">{{medidasm.hombro}}</p>
+          <p class="card-text">{{medidasm.cintura}}</p>
+          <p class="card-text">{{medidasm.cadera}}</p>
+          <p class="card-text">{{medidasm.entrepierna}}</p>
+          <p class="card-text"> {{medidasm.pierna}}</p>
+  
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>

@@ -1,0 +1,29 @@
+
+
+
+<!-- Rounded switch -->
+<div class="container">
+
+    <div class="row" >
+        <div class="col-md-5 col-sm-12">
+            <div class="row switch-container" >
+            <div class="col-2">
+                <label for="">Mujer</label>
+            </div>
+            <div class="col-2">
+                <label class="switch" (click)="changeGender()">
+                    <input type="checkbox" [checked]="gender"
+                    (change)="gender = !gender">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="col-3">
+                <label for="">Hombre</label>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+<app-confeccionar-hombre *ngIf="gender"></app-confeccionar-hombre>
+<app-confeccionar-mujer *ngIf="!gender"></app-confeccionar-mujer>

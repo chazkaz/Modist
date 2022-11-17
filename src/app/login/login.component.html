@@ -1,0 +1,27 @@
+<body>
+
+  
+  <div class="login" >
+    <!--{user.mail}}-->
+      <form class="custom-form" method="post"  >
+        <h1>Login</h1>
+        <input class="form-control"
+          type="email"
+          name="email" 
+          placeholder="Ingrese su email"
+          required="required"
+        />
+        <input
+          type="password"
+          name="password" 
+          placeholder="Ingrese su contraseña"
+          required="required"
+        />
+      <button >Iniciar sesión</button>
+      
+      <br>
+      <a [routerLink]="['/Registrarse']" class="btn btn-primary" type="button">registrar usuario nuevo</a> 
+      </form>
+
+    </div>
+</body>

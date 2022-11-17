@@ -1,0 +1,87 @@
+<div class="row container">
+    
+    <div class="sidebar col-md-3 col-sm-12">
+        <label class="button-container" for="m_Busto"> <button (click)="setContent(0)" type="button" class="btn btn-outline-danger">Busto</button></label>
+        <label class="button-container" for="m_bajo_busto"><button (click)="setContent(1)" type="button" class="btn btn-outline-danger">Baja Busto</button></label>
+        <label class="button-container" for="m_manga"><button (click)="setContent(2)" type="button" class="btn btn-outline-danger">manga</button></label>
+        <label class="button-container" for="m_hombro"><button (click)="setContent(3)" type="button" class="btn btn-outline-danger">hombro</button></label>
+        <label class="button-container" for="m_cintura"><button (click)="setContent(4)" type="button" class="btn btn-outline-danger">cintura</button></label>
+        <label class="button-container" for="m_cadera"><button (click)="setContent(5)" type="button" class="btn btn-outline-danger">cadera</button></label>
+        <label class="button-container" for="m_entrepierna"><button (click)="setContent(6)" type="button" class="btn btn-outline-danger">entrepierna</button></label>
+        <label class="button-container" for="m_pierna"><button (click)="setContent(7)" type="button" class="btn btn-outline-danger">pierna</button></label>
+     
+        
+    </div>
+    <div class="confeccionar-content col-md-3 col-sm-12">
+        <div class="card" style="width: 18rem;">
+            <video id="my_video_2" class="video-js vjs-default-skin_2" width="auto" height="267px" autoplay loop
+                [muted]="'muted'" preload="none" data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'
+                [src]="gif" type='video/mp4'>
+               
+            </video>
+            <div class="card-body">
+                <h5 class="card-title">{{ title }}</h5>
+                <p class="card-text"> {{ content }} </p>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="col col-sm-12 form-content">
+        <form class="mid-form" #medidaForm="ngForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="busto">Medida Busto</label>
+                <input type="text" name="busto" #busto="ngModel" [(ngModel)]="medidaMujer.busto" required
+                    placeholder="Ingresa medida del Busto">
+            </div>
+            <div class="form-group">
+                <label for="bajoBusto">Medida Bajo Busto</label>
+                <input type="text" name="bajoBusto" #bajoBusto="ngModel" [(ngModel)]="medidaMujer.bajoBusto" required
+                    placeholder="Ingresa medida de el bajo Busto">
+            </div>
+            <div class="form-group">
+                <label for="manga">Medida Manga</label>
+                <input type="text" name="manga" #manga="ngModel" [(ngModel)]="medidaMujer.manga" required
+                    placeholder="Ingresa medida de manga">
+            </div>
+            <div class="form-group">
+                <label for="hombro">Medida hombro</label>
+                <input type="text" name="hombro" #hombro="ngModel" [(ngModel)]="medidaMujer.hombro" required
+                    placeholder="Ingresa medida de Hombro">
+            </div>
+            <div class="form-group">
+                <label for="cintura">Medida Cintura</label>
+                <input type="text" name="cintura" #cintura="ngModel" [(ngModel)]="medidaMujer.cintura" required
+                    placeholder="Ingresa medida de cintura">
+            </div>
+            <div class="form-group">
+                <label for="cadera">Medida cadera</label>
+                <input type="text" name="cadera" #cadera="ngModel" [(ngModel)]="medidaMujer.cadera" required
+                    placeholder="Ingresa medida de cadera">
+            </div>
+            <div class="form-group">
+                <label for="entrepierna">Medida Entrepierna</label>
+                <input type="text" name="entrepierna" #entrepierna="ngModel" [(ngModel)]="medidaMujer.entrepierna" required
+                    placeholder="Ingresa medida de entrepierna">
+            </div>
+            <div class="form-group">
+                <label for="pierna">Medida Pierna</label>
+                <input type="text" name="pierna" #pierna="ngModel" [(ngModel)]="medidaMujer.pierna" required
+                    placeholder="Ingresa medida de pierna">
+            </div>
+            <div class="form-group">
+                
+                <angular-file-uploader
+                        [config]="afuConfig"
+                        (ApiResponse)="imageUpload($event)"
+                        ></angular-file-uploader>
+                
+
+            </div>
+            <input type="submit" value="Guardar" class="btn btn-success" [disabled]="medidaForm.invalid">
+        </form>
+        </div>
+    </div>
+
+<a (click)="redirect('medidasMujer')">Agregar Producto</a>
+

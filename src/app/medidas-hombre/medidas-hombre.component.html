@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+  
+  
+      <div class="card col-4" *ngFor="let medidas of medidasHombre" style="width: 18rem;">
+        <img class="card-img-top" src="{{url + 'get-imageHombre/' + medidas.image}}" alt="">
+        <div class="card-body">
+          <h5 class="card-title">medidas</h5>
+          <p class="card-text">{{medidas.cuello}}</p>
+          <p class="card-text">{{medidas.pecho}}</p>
+          <p class="card-text">{{medidas.manga}}</p>
+          <p class="card-text">{{medidas.cintura}}</p>
+          <p class="card-text">{{medidas.cadera}}</p>
+          <p class="card-text">{{medidas.pantorrilla}}</p>
+          <p class="card-text">{{medidas.pantorrilla}}</p>
+          <p>{{medidas.entrepierna}}</p>
+  
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>

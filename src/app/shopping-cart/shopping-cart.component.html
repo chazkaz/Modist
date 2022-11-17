@@ -1,0 +1,29 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre Producto</th>
+                <th scope="col">Valor Producto</th>
+                <th scope="col">Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let product of productList">
+                <tr>
+                    <th scope="row">1</th>
+                    <td>{{product.title}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.content}}</td>
+                </tr>
+            </ng-container>
+            <tr>
+                <th scope="row">1</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>total : {{total}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
