@@ -3,12 +3,24 @@
 </div>
 
 <div>
+    
     <div class="blanco">
             <p class="parafo">Publicar una nueva consulta</p>
-            <form>
-                <p>
-                    <textarea class="form" name="Contenido" placeholder="Agrega tus consultas"></textarea>
-                </p>
+            <form class="mid-form" #foroForm="ngForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="title">Titulo</label>
+                    <input type="text" name="title" #title="ngModel" [(ngModel)]="pregunta.title" required />
+                    <small *ngIf="!title.valid && title.touched">
+                        el nombre no es válido
+                    </small>
+                </div>
+
+                <label for="content">Descripcion</label>
+                <textarea name="content" #content="ngModel" [(ngModel)]="pregunta.content" requireds></textarea>
+                <small *ngIf="!content.valid && content.touched">
+                    la descripcion no es valida
+                </small>
+                <input type="submit" value="Guardar" class="btn btn-success" [disabled]="foroForm.invalid">
             </form>
-            <button type="submit" class="botonF" >Publicar </button>
+
     </div>

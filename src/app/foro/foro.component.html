@@ -10,9 +10,11 @@
         <br>
                 
             <br>
-        <p class="Gris">Aqui va un tema del foro </p>
-        <br>
-        <p class="Gris">Aqui va un tema del foro </p>
+            <div class="foro" *ngFor="let pregunta of preguntas">
+                <p class="Gris-title">{{pregunta.title}} </p>
+                <p class="Gris">{{pregunta.content}} </p>
+            </div>
+        
 </div>
 
 </body>

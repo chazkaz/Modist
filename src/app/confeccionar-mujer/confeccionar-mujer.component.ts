@@ -87,7 +87,7 @@ export class ConfeccionarMujerComponent implements OnInit {
   }
   imageUpload(data: any){
      
-    this.medidaMujer.image = JSON.stringify(data.body.image);
+    this.medidaMujer.image = data.body.image;
     console.log(this.medidaMujer.image);
 
   }
