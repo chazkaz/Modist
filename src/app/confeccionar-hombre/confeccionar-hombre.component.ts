@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { MedidasHombreService } from '../services/medidashombre.service';
 import { medidasHombre } from '../models/medidasHombre';
 import { Global } from '../services/Global';
+import swal from'sweetalert2';
 
 @Component({
   selector: 'app-confeccionar-hombre',
@@ -104,7 +105,10 @@ export class ConfeccionarHombreComponent implements OnInit {
   onSubmit() {
     this._medidasHombreService.create(this.medidaHombre).subscribe(
       response => {
-        
+        swal.fire(
+          'Medidas enviadas Correctamente',
+          'las medidas fueron enviadas correctamente'
+        );
         this.medidaHombre = response.medida;
         
       },

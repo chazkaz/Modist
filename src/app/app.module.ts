@@ -20,6 +20,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ProductosNewComponent } from './productos-new/productos-new.component';
 import { MedidasHombreComponent } from './medidas-hombre/medidas-hombre.component';
 import { MedidasMujerComponent } from './medidas-mujer/medidas-mujer.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { MedidasMujerComponent } from './medidas-mujer/medidas-mujer.component';
     ProductosNewComponent,
     MedidasHombreComponent,
     MedidasMujerComponent,
+    RegisterComponent,
    
   ],
   imports: [

@@ -13,6 +13,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ProductosNewComponent } from './productos-new/productos-new.component';
 import { MedidasHombreComponent } from './medidas-hombre/medidas-hombre.component';
 import { MedidasMujerComponent } from './medidas-mujer/medidas-mujer.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -27,7 +28,9 @@ const routes: Routes = [
   {path: "shopping", component:ShoppingCartComponent},
   {path: 'productos/crear',component: ProductosNewComponent},
   {path: 'medidasHombre',component:MedidasHombreComponent},
-  {path: 'medidasMujer',component:MedidasMujerComponent}
+  {path: 'medidasMujer',component:MedidasMujerComponent},
+  {path: 'register',component:RegisterComponent}
+
   
 ];
 

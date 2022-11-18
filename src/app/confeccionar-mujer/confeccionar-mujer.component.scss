@@ -53,6 +53,11 @@
     width: 100%;
     z-index: 1;
 }
+.btn-ver{
+    display: block;
+    text-align: center;
+    margin-bottom: 50px;
+}
 @media (max-width:500px) {
     .card{
         left: -95px;

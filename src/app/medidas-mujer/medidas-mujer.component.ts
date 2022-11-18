@@ -27,9 +27,9 @@ export class MedidasMujerComponent implements OnInit {
       response => {
         console.log(response);
             if(response.medidas){
-          this.medidasMujer = response.medidas;
-          console.log(this.medidasMujer)
-        }else{
+              this.medidasMujer = response.medidas;
+              console.log(this.medidasMujer)
+            }else{
         }
         },
     error => {

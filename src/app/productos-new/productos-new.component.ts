@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Producto } from '../models/producto';
-import { ProductoService } from '../services/productos.service'
+import { ProductoService } from '../services/productos.service';
+import swal from'sweetalert2';
 import { Global } from '../services/Global';
 
 
@@ -58,6 +59,10 @@ export class ProductosNewComponent implements OnInit {
       response => {
         
         this.producto = response.producto;
+        swal.fire(
+          'Producto Creado',
+          'El productos fue Creado correctamente'
+        );
         console.log(response);
       },
       error => {

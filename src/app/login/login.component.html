@@ -1,5 +1,7 @@
 <body>
-
+  <div id="slider" class="slider-small">
+    <h1>Inicio Sesion</h1>
+</div>
   
   <div class="login" >
     <!--{user.mail}}-->
@@ -17,10 +19,10 @@
           placeholder="Ingrese su contraseña"
           required="required"
         />
-      <button >Iniciar sesión</button>
+      <button (click)="redirect('productos')">Iniciar sesión</button>
       
       <br>
-      <a [routerLink]="['/Registrarse']" class="btn btn-primary" type="button">registrar usuario nuevo</a> 
+      <button (click)="redirect('register')">Registrarse</button> 
       </form>
 
     </div>
